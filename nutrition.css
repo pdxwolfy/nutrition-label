@@ -1,0 +1,65 @@
+body {
+  font: normal 100% "Helvetica", "Arial", sans-serif;
+  width: 670px;
+}
+
+article {
+  border: 2px solid #000000;
+  box-sizing: border-box;
+  margin: 8px;
+  padding: 10px 15px;
+  width: 680px;
+}
+
+h1 {
+  font-size: 3.5em;
+  margin: 0;
+}
+
+h2 {
+  border-bottom: 1px solid #000000;
+  border-top: 30px solid #000000;
+  font-size: 1.75em;
+  line-height: 1.89em;
+  margin: 5px auto;
+}
+
+p {
+  font-size: 1.75em;
+  margin: 0;
+}
+
+header dl,
+header dt,
+header dd {
+  display: inline;
+  margin: 0;
+}
+
+header::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+header dl {
+  float: left;
+  font-size: 0;
+}
+
+header dl:last-of-type {
+  float: right;
+}
+
+header dt,
+header dd {
+  font-size: 1.75rem;
+}
+
+header dt::after {
+  content: " ";
+}
+
+header dl:first-of-type dt {
+  font-weight: bold;
+}
