@@ -1,65 +1,218 @@
+html, body {
+  background-color: #ffffff;
+  font: normal 28px Helvetica, Arial, sans-serif;
+}
+
 body {
-  font: normal 100% "Helvetica", "Arial", sans-serif;
-  width: 670px;
+  margin: 8px;
 }
 
 article {
   border: 2px solid #000000;
   box-sizing: border-box;
-  margin: 8px;
-  padding: 10px 15px;
+  padding: 10px 15px 15px 15px;
   width: 680px;
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 2rem;
+  font-weight: bold;
   margin: 0;
 }
 
 h2 {
   border-bottom: 1px solid #000000;
   border-top: 30px solid #000000;
-  font-size: 1.75em;
-  line-height: 1.89em;
-  margin: 5px auto;
+  font-weight: bold;
+  margin: 5px auto 0 auto;
+  padding: 10px 0;
 }
 
 p {
-  font-size: 1.75em;
   margin: 0;
 }
 
-header dl,
-header dt,
-header dd {
+dl {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 0;
+  margin: 0;
+  padding: 5px 0;
+  vertical-align: top;
+  width: 50%;
+}
+
+dt,
+dd {
   display: inline;
+  font-size: 1rem;
+  vertical-align: top;
+}
+
+dt {
+  padding-right: 0.28rem;
+  font-weight: bold;
+}
+
+sup {
+  font-size: smaller;
+  padding-right: 1px;
+  position: static;
+  top: auto;
+  vertical-align: 3px;
+}
+
+/******************************************************************************/
+/* Header material                                                            */
+/******************************************************************************/
+
+header {
+  border-bottom: 15px solid #000000;
+  margin-bottom: 10px;
+}
+
+header dl + dl {
+  text-align: right;
+}
+
+header dl + dl dt {
+  font-weight: normal;
+}
+
+/******************************************************************************/
+/* Tables                                                                     */
+/******************************************************************************/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table + table {
+  font-size: 0.8rem;
+}
+
+th,
+td {
+  padding: 2px 0;
+  text-align: left;
+}
+
+th dd {
+  font-weight: normal;
+}
+
+table + table td {
+  border-top: none;
+  text-align: left;
+  width: 37%;
+}
+
+table + table td:not(:first-of-type) {
+  font-weight: normal;
+  text-align: left;
+  width: 21%;
+}
+
+.indent {
+  border-top: none;
+  width: 1rem;
+}
+
+table + table .indent {
+  text-indent: 1.2rem;
+}
+
+/******************************************************************************/
+/* Table head                                                                 */
+/******************************************************************************/
+
+thead th {
+  font-weight: 600;
+  padding: 1px 0 1px 0;
+  text-align: right;
+  vertical-align: middle;
+}
+
+table + table thead {
+  border-bottom: 1px solid black;
+}
+
+table + table thead th {
+  font-weight: normal;
+  padding-left: 1px;
+  text-align: left;
+}
+
+/******************************************************************************/
+/* Table body                                                                 */
+/******************************************************************************/
+
+tbody + tbody {
+  border-top: 20px solid black;
+}
+
+tbody th,
+tbody td {
+  border-top: 1px solid black;
+}
+
+table:first-of-type tbody td:last-of-type {
+  font-weight: 600;
+  text-align: right;
+}
+
+tbody dl {
+  display: inline-block;
+  padding: 0;
   margin: 0;
+  text-align: left;
+  width: auto;
 }
 
-header::after {
-  display: block;
-  clear: both;
-  content: "";
+tbody td dt {
+  font-weight: normal;
 }
 
-header dl {
-  float: left;
+table:first-of-type tbody + tbody td:last-of-type {
+  font-weight: normal;
+}
+
+/******************************************************************************/
+/* Table foot                                                                 */
+/******************************************************************************/
+
+tfoot {
+  border-top: 1px solid black;
   font-size: 0;
 }
 
-header dl:last-of-type {
-  float: right;
+tfoot tr {
+  text-align: left;
 }
 
-header dt,
-header dd {
-  font-size: 1.75rem;
+tfoot td {
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
 
-header dt::after {
-  content: " ";
+tfoot p {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 14px 0;
+  text-align: left;
+  width: 97%;
+  vertical-align: top;
 }
 
-header dl:first-of-type dt {
-  font-weight: bold;
+tfoot p:first-of-type {
+  width: 3%;
+}
+
+tfoot p:last-of-type {
+  padding-right: 2%;
 }
