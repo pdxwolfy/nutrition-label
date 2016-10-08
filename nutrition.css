@@ -1,6 +1,10 @@
 html, body {
-  background-color: #ffffff;
   font: normal 28px Helvetica, Arial, sans-serif;
+}
+
+html {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 body {
@@ -14,29 +18,25 @@ article {
   width: 680px;
 }
 
+h1, h2 {
+  font-weight: bold;
+}
+
 h1 {
   font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
 }
 
 h2 {
   border-bottom: 1px solid #000000;
   border-top: 30px solid #000000;
-  font-weight: bold;
   margin: 5px auto 0 auto;
   padding: 10px 0;
-}
-
-p {
-  margin: 0;
 }
 
 dl {
   box-sizing: border-box;
   display: inline-block;
   font-size: 0;
-  margin: 0;
   padding: 5px 0;
   vertical-align: top;
   width: 50%;
@@ -50,8 +50,12 @@ dd {
 }
 
 dt {
-  padding-right: 0.28rem;
   font-weight: bold;
+}
+
+dt::after {
+  display: inline;
+  content: " ";
 }
 
 sup {
@@ -130,7 +134,7 @@ table + table .indent {
 
 thead th {
   font-weight: 600;
-  padding: 1px 0 1px 0;
+  padding: 1px 0;
   text-align: right;
   vertical-align: middle;
 }
@@ -165,8 +169,8 @@ table:first-of-type tbody td:last-of-type {
 
 tbody dl {
   display: inline-block;
-  padding: 0;
-  margin: 0;
+  padding-bottom: 0;
+  padding-top: 0;
   text-align: left;
   width: auto;
 }
@@ -194,8 +198,7 @@ tfoot tr {
 
 tfoot td {
   text-align: left;
-  margin: 0;
-  padding: 0;
+  padding-top: 0;
 }
 
 tfoot p {
